@@ -24,7 +24,7 @@ class Config {
   final double offsetPow;
   final double blur;
   final double blurPow;
-  final Color shadowColor;
+  final Color? shadowColor;
 
   ///Create new Configuration Object or if it created for first time return that instance.
   ///  * number of Steps
@@ -53,14 +53,14 @@ class Config {
         assert(blurPow > 0.0 && blurPow <= 4.0);
 
   Config copyWith(
-          {int numSteps,
-          double opacity,
-          double opacityPow,
-          double offset,
-          double offsetPow,
-          double blur,
-          double blurPow,
-          Color shadowColor}) =>
+          {int? numSteps,
+          double? opacity,
+          double? opacityPow,
+          double? offset,
+          double? offsetPow,
+          double? blur,
+          double? blurPow,
+          Color? shadowColor}) =>
       Config(
         numSteps: numSteps ?? this.numSteps,
         opacity: opacity ?? this.opacity,

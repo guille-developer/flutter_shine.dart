@@ -6,7 +6,7 @@ import 'package:flutter_shine/src/shine_shadow.dart';
 
 /// The function use to create widgets
 typedef ShineWidgetBuilder = Widget Function(
-    BuildContext context, ShineShadow shineShadow);
+    BuildContext context, ShineShadow? shineShadow);
 
 /// Widget to create custom, managed, light-based shadow in a very simple way.
 ///
@@ -18,10 +18,10 @@ typedef ShineWidgetBuilder = Widget Function(
 ///
 class FlutterShine extends StatelessWidget {
   const FlutterShine({
-    Key key,
+    Key? key,
     this.config = const Config(),
     this.light = const Light(),
-    this.builder,
+    required this.builder,
   })  : assert(builder != null, "Widget Builder must be not null"),
         super(key: key);
 

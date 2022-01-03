@@ -11,8 +11,8 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  double x;
-  double y;
+  late double x;
+  late double y;
 
   @override
   void initState() {
